@@ -1,0 +1,809 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/* Custom Styles */
+body {
+    background-color: #f2f2f2 !important;
+    font-size: 16px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Buttons */
+.site-btn {
+	display: inline-block;
+	height: 2.25rem;
+	font-size: .875rem !important;
+	background-color: #1D7473;
+	border: 0;
+	color: #fff;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-radius: .25rem;
+	font-weight: 500;
+	cursor: pointer;
+	text-transform: uppercase;
+	line-height: 2.25rem;
+}
+.site-btn.size-small {
+    height: 2rem !important;
+    line-height: 2rem !important;
+}
+.site-btn.color-gray {
+    background-color: #d4d4d4 !important;
+    color: #111;
+    opacity: .87;
+}
+.site-btn.color-gray:hover,
+.site-btn.color-gray:focus {
+    background-color: #a0a0a0 !important;
+}
+.site-btn.font-lowercase {
+    text-transform: inherit!important;
+}
+/* widget buttons */
+.widget-btn {
+	background-color: #fff;
+	height: 2.25rem;
+	display: inline-block;
+	color: #1d7473;
+	line-height: 2.25rem;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+    margin: .5rem 0;
+}
+.widget-btn:hover, .widget-btn:focus {
+    text-decoration: none;
+    background-color: #dedede;
+    color: #1d7473;
+}
+.widget-btn.btn-half {
+    width: 49% !important;
+}
+.widget-btn.btn-gray {
+    background-color: #d4d4d4;
+    color: #111;
+    opacity: .87;
+}
+.widget-btn.color-gray:hover,
+.widget-btn.color-gray:focus {
+    background-color: #a0a0a0;
+}
+
+/* call to action */
+.site-cta {
+	color: #fff;
+	background-color: #b1b1b1;
+	padding: .5rem 2rem;
+	display: inline-block;
+	margin-bottom: 1rem;
+	box-shadow: 0 3px 3px 0 #888;
+    font-weight: 300;
+}
+.site-cta:hover,
+.site-cta:focus {
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 5px 4px 0 #888;
+}
+.site-cta span {
+    font-weight: 500;
+}
+.site-cta i {
+    margin-right: .5rem;
+}
+
+/* Links */
+.link-overlay {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: .2;
+}
+.link-overlay:hover, .link-overlay:focus {
+    background-color: #111;
+}
+
+/* Other classes */
+.full-width-center {
+    width: 100%;
+    text-align: center;
+}
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+.mt-10 {
+    margin-top: .625rem;
+}
+.mt-20 {
+    margin-top: 1.25rem;
+}
+.mt-30 {
+    margin-top: 1.875rem;
+}
+.mt-40 {
+    margin-top: 2.5rem;
+}
+.mt-50 {
+    margin-top: 3.125rem;
+}
+
+.mb-10 {
+    margin-bottom: .625rem;
+}
+.mb-20 {
+    margin-bottom: 1.25rem;
+}
+.mb-30 {
+    margin-bottom: 1.875rem;
+}
+.mb-40 {
+    margin-bottom: 2.5rem;
+}
+.mb-50 {
+    margin-bottom: 3.125rem;
+}
+/* form and inputs */
+form {
+    margin-bottom: 1rem;
+}
+input[type="text"] {
+	border-color: #c3c3c3;
+	font-style: italic;
+	font-size: .875rem;
+	padding-left: 1rem;
+}
+input[type="text"]:hover, input[type="text"]:focus {
+    outline-style: none;
+    outline-color: transparent;
+    border-color: #c3c3c3;
+    box-shadow: none;
+}
+input[type="submit"] {
+	position: relative !important;
+	background-color: #1d7473;
+	border: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 2rem;
+	font-size: .875rem;
+	font-style: italic;
+}
+input[type="submit"]:hover, 
+input[type="submit"]:focus {
+    outline-style: none;
+    outline-color: transparent;
+    border-color: #c3c3c3;
+    box-shadow: none;
+    background-color: #1d7473;
+}
+input[type="text"], 
+input[type="submit"] {
+    height: 2rem;
+}
+
+
+/*
+* Site Header
+*/
+
+.site-header {
+    padding: 1rem 0;
+    box-shadow: 0 4px 4px 0 #dedede;
+}
+.logo {
+	width: 100%;
+	display: inline-block;
+}
+.logo img {
+    margin: 0;
+    height: 1.25rem;
+    width: auto;
+}
+/* Primary Menu */
+#primary-nemu {
+	width: 100%;
+	display: inline-block;
+}
+#primary-nemu ul {
+	list-style: none;
+	margin: .375rem 0 0 0;
+	padding: 0;
+	display: inline-block;
+}
+#primary-nemu ul li {
+    float: left;
+    margin-right: 1.5rem;
+}
+#primary-nemu ul li a {
+    display: block;
+    font: .875rem;
+    line-height: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+#primary-nemu ul li a:hover {}
+
+#primary-nemu ul li a i {
+    margin-right: .2rem;
+}
+
+#primary-nemu ul li:nth-child(1) a {
+    color: #a4048f;
+}
+#primary-nemu ul li:nth-child(2) a {
+    color: #008347;
+}
+#primary-nemu ul li:nth-child(3) a {
+    color: #ac5101;
+}
+#primary-nemu ul li:nth-child(4) a {
+    color: #512781;
+}
+/* Social Icons */
+.social-sign {
+    float: left;
+    margin-top: .375rem;
+}
+.social-sign a {
+    margin-right: .4rem;
+}
+.social-sign i {
+    font-size: 1.5rem;
+}
+.social-sign .facebook i {
+    color: #3b5999;
+}
+.social-sign .instagram i {
+    color: #e4405f;
+}
+.social-sign .youtube i {
+    color: #cd201f;
+}
+/* User account */
+.user-entry {
+    float: right;
+}
+
+/* Search form */
+#searchform {
+    padding: 2rem 0;
+}
+#searchform input[type="text"] {
+	border-color: #c3c3c3;
+	font-style: italic;
+	font-size: .875rem;
+	padding-left: 1rem;
+}
+#searchform input[type="text"]:hover, #searchform input[type="text"]:focus {
+    outline-style: none;
+    outline-color: transparent;
+    border-color: #c3c3c3;
+    box-shadow: none;
+}
+#searchform input[type="submit"] {
+	text-indent: -999px;
+	position: relative !important;
+	background-image: url(images/icons/search.png);
+	background-position: center;
+	width: 3rem;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #1d7473;
+    border: 0;
+}
+#searchform input[type="submit"]:hover, #searchform input[type="submit"]:focus {
+    outline-style: none;
+    outline-color: transparent;
+    border-color: #c3c3c3;
+    box-shadow: none;
+    background-color: #1d7473;
+}
+#searchform input[type="text"], 
+#searchform input[type="submit"] {
+    height: 2rem;
+}
+
+
+/* Sidebar */
+.sidebar.left-sidebar {
+	width: 90%;
+}
+/* Categories */
+.widget {
+	margin-bottom: 2rem;
+    position: relative;
+}
+.widget img {
+    width: 100%;
+    height: auto;
+}
+.widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* widget title */
+.widget-title {
+	font-size: .875rem;
+	font-weight: 500;
+	color: #1d7473;
+	background-color: #fff;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	border-left: .32rem solid #1d7473;
+	padding-left: 1.25rem;
+	margin-bottom: 1px;
+}
+.widget-title.title-absolute {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1d7473;
+    opacity: .8;
+    border-left: 0;
+    font-style: italic;
+    color: #fff;
+    font-weight: 500;
+}
+/* widget categories */
+.widget.categories .cat-item a {
+	font-size: .875rem;
+	font-weight: 500;
+	color: #1d7473;
+	background-color: transparent;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	border-left: .32rem solid transparent;
+	padding-left: 1.25rem;
+	margin-bottom: 0;
+    display: block;
+}
+.widget.categories .cat-item a:hover,
+.widget.categories .cat-item a:focus {
+    text-decoration: none;
+    background-color: #fff;
+    border-left: .32rem solid #1d7473;
+}
+
+/* widget latest devices */
+.latest-devices {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.single-device {
+    text-align: center;
+    width: 33%;
+    min-width: 33%;
+    position: relative;
+    margin-bottom: 1px;
+}
+.single-device p {
+	font-size: .75rem;
+	margin-bottom: .5rem;
+}
+.device-photo {
+	margin: .5rem 0;
+}
+.device-photo img {
+    height: 5rem;
+    width: auto;
+}
+
+
+/*
+ * Main Content
+ * Home page
+ */
+
+/* Latest device review */
+.single-device-review {
+	background-color: #BEBEBE;
+	margin-bottom: 1rem;
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+.review-photo {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: end;
+	min-height: 12.5rem;
+	flex-wrap: wrap;
+	padding-bottom: 1rem;
+}
+.review-photo img {
+	height: auto;
+	max-width: 80%;
+	max-height: 10rem;
+}
+.single-device-review .device-meta {
+	text-align: center;
+	padding: .5rem 0;
+	background-color: #1d7473;
+	color: #fff;
+    display: none;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: calc(50% - 2rem);
+}
+.single-device-review .device-meta h2 {
+    font-size: 1.125rem;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+.single-device-review .device-meta span {
+    font-size: .75rem;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+.single-device-review:hover .device-meta,
+.single-device-review:focus .device-meta {
+    display: block;
+}
+.device-meta .post-author {
+    margin-right: 1rem;
+}
+
+/* News Articles */
+.latest-news {
+    padding: 2.5rem 0;
+}
+.news-article {
+	background-color: #DCDCDC;
+    position: relative;
+    width: calc( 100% - .0625rem);
+    margin-bottom: .0625rem;
+}
+.news-image {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: end;
+}
+.news-image img {
+	height: 12.5rem;
+	margin-top: 2rem;
+	width: auto;
+}
+.news-meta {
+	background-color: #b1b1b1;
+	padding: .5rem;
+	color: #fff;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+.news-meta a {
+    color: #fff;
+}
+.news-meta a:hover,
+.news-meta a:focus {
+    color: #fff;
+}
+.news-meta .news-title {
+    font-size: .75rem;
+    font-weight: 500;
+}
+.news-meta p {
+    font-size: .75rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    color: #1d7473;
+}
+.news-meta p a {
+    color: #1d7473;
+}
+.news-meta p a:hover,
+.news-meta p a:focus {
+    color: #1d7473;
+}
+.news-meta span {
+	float: right;
+	padding: 0 .4rem;
+    cursor: pointer;
+}
+
+
+
+/*
+* Site Footer
+*/
+.site-footer {
+	background-color: #444;
+	color: #fff;
+	padding: 2.25rem 0;
+	margin-top: 3.125rem;
+}
+
+.footer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-menu li a {
+	color: #fff;
+	margin-bottom: .5rem;
+	display: block;
+}
+.footer-logo {
+    height: 1.25rem;
+    margin-bottom: 1rem;
+}
+.copyright {
+    margin: 0;
+}
