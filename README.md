@@ -4,7 +4,7 @@ Techpostman is a simple static website for learning purpose and built with - `HT
 
 ## Author
 
-Sajib Chakma <chakma.sajib95@yahoo.com>
+[Sajib Chakma](https://github.com/ChakmaSajib)
 
 ## Installation
 
